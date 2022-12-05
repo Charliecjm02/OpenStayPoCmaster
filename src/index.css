@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/*Font usage:
+font-family: 'Rubik', sans-serif;
+font-family: 'Urbanist', sans-serif;
+*/

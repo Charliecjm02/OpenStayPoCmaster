@@ -1,0 +1,26 @@
+.base {
+  border: 1px solid white;
+  outline: none;
+  min-height: 40px;
+  min-width: 200px;
+  background-color: transparent;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  &:hover {
+    filter: brightness(0.90);
+  }
+}
+
+.filled {
+  background-color: #2A83C5;
+;
+  border: 1px solid #2A83C5;
+}

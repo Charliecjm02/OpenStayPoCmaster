@@ -1,0 +1,503 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "rentalId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "date",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "booker",
+        "type": "address"
+      }
+    ],
+    "name": "RentalBooked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "city",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "lat",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "long",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "firstDescription",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "secondaryDescription",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "imageUrl",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "maxGuests",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "pricePerDay",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "renter",
+        "type": "address"
+      }
+    ],
+    "name": "RentalCreated",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "PLATFORM_COMISSION",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "city",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "lat",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "long",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "firstDescription",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "secondaryDescription",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "imgUrl",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxGuests",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "pricePerDay",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "receiver",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "percentage",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct IOpenStay.RentalPaymentReceiver[]",
+        "name": "paymentReceivers",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "addRental",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rentalId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string[]",
+        "name": "bookings",
+        "type": "string[]"
+      }
+    ],
+    "name": "bookRental",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rentalId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string[]",
+        "name": "bookings",
+        "type": "string[]"
+      }
+    ],
+    "name": "checkBookings",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rentalId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amountOfDays",
+        "type": "uint256"
+      }
+    ],
+    "name": "getRentPrice",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rentalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getRental",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "city",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "lat",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "long",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "firstDescription",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "secondaryDescription",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "imgUrl",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxGuests",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pricePerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isShow",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "renter",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct IOpenStay.Rental",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rentalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getRentalBookings",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "date",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "booker",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct IOpenStay.Booking[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getRentals",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "city",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "lat",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "long",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "firstDescription",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "secondaryDescription",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "imgUrl",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxGuests",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pricePerDay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isShow",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "renter",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct IOpenStay.Rental[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "rentalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "hideRental",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "comission",
+        "type": "uint256"
+      }
+    ],
+    "name": "updatePlatformComission",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

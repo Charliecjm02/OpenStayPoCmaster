@@ -1,0 +1,414 @@
+.logo {
+    width: 20vw;
+    height: calc(15vw*0.3)
+}
+
+.rentals {
+    min-width: 100vw;
+    width: 100%;
+    height: 100%;
+    background-color: #F1F6F8;
+}
+
+.rentalsContainer {
+    max-width: 1381px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+
+}
+
+@media (max-width: 960px) {
+    .rentalsContainer {
+        padding: 0 20px !important;
+    }
+}
+
+.searchReminder {
+    display: flex;
+}
+
+.filter {
+    margin-right: 8px;
+    background-color: white;
+    border-radius: 10px;
+    width: 190px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 0 16px;
+}
+
+.filter:last-child {
+    margin-right: 0;
+}
+
+.searchFiltersIcon {
+    background-color: #457af4;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+.line {
+    border-top: 1px solid rgb(12, 67, 230);
+    margin-bottom: 0;
+}
+
+.line2 {
+    border-top: 0.5px solid rgb(230, 230, 230);
+    margin: 30px 0;
+}
+
+
+.rentalsContent {
+    margin-top: 46px;
+    display: flex;
+    justify-content: start;
+    width: 97%;
+    background: #FFFFFF;
+    box-shadow: 0 0 19px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.rentalsContent h2 {
+    padding: 0;
+    margin: 0 0 45px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.rentalsContentL {
+    width: 50%;
+    padding: 35px;
+    min-height: calc(100vh - 270px);
+    max-height: calc(100vh - 270px);
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-face-color: grey;
+    scrollbar-track-color: lightgrey;
+    scrollbar-color: grey lightgrey;
+    scrollbar-width: 5px;
+    margin-right: 5px;
+}
+
+.rentalsContentL::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: lightgrey;
+}
+
+.rentalsContentL::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 16px;
+}
+
+
+.rentalsList {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.rentalItem {
+    list-style: none;
+    max-width: 300px;
+    min-height: 320px;
+    height: 100%;
+    width: 100%;
+}
+
+.rentalItemActive {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+
+
+.rentalsContentR {
+    width: 50%;
+}
+
+.rentalDiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rentalDivH {
+    animation: mymove 3s;
+    border-radius: 20px;
+    display: flex;
+    justify-content: start;
+}
+
+
+@keyframes mymove {
+    from {
+        background-color: #dddddd;
+    }
+
+    to {
+        background-color: #dddddd00;
+    }
+}
+
+.rentalImg {
+    width: 100%;
+    height: 187px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.rentalInfo {
+    margin: 10px auto 0;
+    width: 90%;
+    padding-bottom: 10px;
+    min-height: 120px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.guests {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+
+}
+
+.guests span {
+    font-size: 14px;
+    line-height: 14px;
+    padding-right: 5px;
+}
+
+.guests img {
+    margin-bottom: 2px;
+}
+
+.rentalTitleAndPrice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.rentTitle {
+    max-width: 50%;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.rentPrice {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    white-space: nowrap;
+    max-width: 50%;
+    width: 100%;
+}
+
+.rentPrice span {
+    display: inline-block;
+    width: auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: right;
+}
+
+.rentPrice span {
+    padding-left: 4px;
+}
+
+.rentalDesc {
+    color: gray;
+}
+
+.bottomWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.desc {
+    width: 75%;
+}
+
+.stayBtn {
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+
+    background: #2A83C5;
+    border-radius: 5px;
+    transition: all 0.2s linear;
+    border: none;
+    outline: none;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+    color: #FFFFFF;
+}
+
+.stayBtn:hover {
+    filter: brightness(90%);
+}
+
+.noStays {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.connectedButton {
+    width: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+
+.connectedButtonBlack {
+    border: 1px solid black;
+    color: black;
+}
+
+.addressWrapper {
+    position: relative;
+}
+
+.magicOptions {
+    position: absolute;
+    bottom: -90px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 225px;
+    height: 57px;
+    color: white;
+    background-color: #2A83C5;
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 10px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.magicBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    border: none;
+    outline: none;
+    background-color: #2A83C5;
+    color: white;
+    font-family: inherit !important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0 !important;
+    transition: all 0.2s linear;
+
+}
+
+.magicBtn:hover {
+    filter: brightness(90%);
+}
+
+.magicBtn:first-child {
+    border-right: 1px solid white;
+    border-radius: 10px 0 0 10px !important;
+}
+
+.connectBtn {
+    width: 216px;
+    height: 54px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.connectBtnFilled {
+    width: 270px;
+    background-color: #2A83C5;
+    border: none;
+
+}
+
+.connectBtn:hover {
+    transform: scale(1.03);
+}
+
+.connectBtnFilled:hover {
+    transform: scale(1);
+    filter: brightness(0.90);
+
+}
+
+.connectedButton div {
+    border-radius: 50%;
+}
+
+
+.connectWalletButton {
+    height: 150px !important;
+    width: 195px !important;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.connectWalletButton:hover {
+    background-color: #e9edfa;
+}
+
+.connectWalletButton span {
+    flex-direction: column-reverse !important;
+    color: rgb(46, 125, 175);
+}
+
+.connectWalletButton svg {
+    margin: 0;
+    margin-bottom: 10px;
+}

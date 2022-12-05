@@ -1,0 +1,119 @@
+/* DatePicker wrapper <div> */
+.sc-gGCDDS {
+    max-width: 279px!important;
+    width: 100% !important;
+    outline: none !important;
+    font-family: inherit !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+
+}
+/* DatePicker Input */
+
+.sc-gGCDDS input {
+    font-family: inherit !important;
+    font-weight: 500 !important;
+    font-size: 18px !important;
+    color: black !important;
+}
+
+/* DatePicker Calendar Icon */
+
+.sc-gGCDDS span {
+    display: inline-block !important;
+    margin-top: 10px !important;
+}
+
+    /* Select inner <div> */
+.sc-fbyfCU {
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 62px !important;
+    font-family: inherit !important;
+    font-weight: 500 !important;
+    font-size: 18px !important;
+    line-height: 21px !important;
+    max-width: 279px !important;
+    width: 100% !important;
+    border-bottom-left-radius: 10px !important;
+    border-top-left-radius: 10px !important;
+    position: relative !important;
+    color: black !important;
+    outline: none !important;
+
+}
+
+.sc-fKVqWL {
+    outline: none !important;
+    border: none !important;
+}
+
+
+
+.ecWxal {
+    border-radius: 10px !important;
+
+}
+
+.gsNilK {
+    position: absolute !important;
+    right: 0 !important;
+}
+
+    /* Select outer <div> */
+.sc-jUosCB {
+    width: 170px !important;
+}
+
+/* DatePicker and Input <input> */
+.sc-faUpoM {
+    height:26px !important;
+    font-size:14px !important;
+}
+
+/* DatePicker <span> */
+.sc-lcepkR {
+    height: 70% !important;
+}
+
+.sc-eGRUor {
+    width: 18vw !important;
+    min-width: 170px !important;
+    background-color: white !important;
+    border: none !important;
+    top: -170px !important;
+    height: 150px !important;
+}
+
+
+.sc-llYSUQ {
+    top: -170px !important;
+    height: 150px !important;
+}
+.sc-ctqQKy {
+   /* max-width: 279px!important;
+    width: 100% !important;*/
+    font-family: inherit !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    color: black !important;
+    line-height: 21px !important;
+    margin-left: -37px !important;
+}
+
+.googleMap {
+    max-width: 640px !important;
+    width: 100% !important;
+    max-height: 700px !important;
+    height: 77vh !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+@media (max-width: 1500px) {
+    .googleMap {
+        max-width: calc(47% - 20px) !important;
+        width: calc(47% - 20px)!important;
+    }
+}
